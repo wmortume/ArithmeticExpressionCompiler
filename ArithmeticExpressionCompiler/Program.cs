@@ -11,7 +11,7 @@ namespace ArithmeticExpressionCompiler
     {
         static void Main(string[] args)
         {
-            string path = Path.GetFullPath("expression.txt"); //each line have numbers spaced out by a "+", example: 2 + 5 + 3
+            string path = Path.GetFullPath("expression.txt"); //supports one line of numbers spaced out by a "+", example: 2 + 5 + 3
             List<int> expressions = File.ReadLines(path).First().Split(new[] { " + " }, StringSplitOptions.None).Select(int.Parse).ToList();
 
             List<string> instructions = new List<string>();
